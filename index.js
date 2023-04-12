@@ -64,6 +64,15 @@ client.on(Events.GuildMemberAdd, async member  => {
     await channel2.send({content:`<@${member.id}>`});
 
 });
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 wCard.LoadFonts().then(
     client.login(config.token)
-)
+).catch((e)=>{
+    console.log(e)
+    await sleep(60000)
+})
