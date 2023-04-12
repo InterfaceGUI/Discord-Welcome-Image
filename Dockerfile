@@ -1,13 +1,11 @@
 FROM node:18
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install app dependencies
-COPY package.json /usr/src/app/
-COPY . /usr/src/app/
-COPY ./fonts/ /usr/src/app/fonts
+COPY package.json /app/
+COPY . /app/
+COPY /fonts /app/fonts
 
 RUN npm install
 CMD [ "node", "index.js" ]
