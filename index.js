@@ -72,7 +72,7 @@ function sleep(ms) {
 
 wCard.LoadFonts().then(
     client.login(config.token)
-).catch((e)=>{
+).catch(async (e)=>{
     console.log(e)
     await sleep(60000)
 })
