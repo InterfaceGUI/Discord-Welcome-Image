@@ -4,8 +4,8 @@
 version: "3.9"
 
 services:
-  TwitchAPI:
-    image: "ghcr.io/interfacegui/twitch-api-token-refresher:latest"
+  DiscordWelcomeBot:
+    image: "ghcr.io/interfacegui/discord-welcome-image-bot:latest"
     environment:
       TOKEN: "YOUR Discord TOKEN"
       GUILDID: "YOUR Discord ServerID"
