@@ -8,6 +8,7 @@ const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
 const config={
+    backgroundImg: process.env.BGIMAGEURL,
     token: process.env.TOKEN,
     GuildID: process.env.GUILDID,
     WelcomeChannel: process.env.W_CHANNEL,
@@ -23,7 +24,7 @@ const wCard = new WelcomeCard({
 })
 
 
-const bg = 'https://media.discordapp.net/attachments/464402915591979028/1095545854917623848/PSX_20230412_110801.jpg'
+const bg = config.backgroundImg || 'https://media.discordapp.net/attachments/464402915591979028/1095545854917623848/PSX_20230412_110801.jpg'
 
 client.once(Events.ClientReady, c => {
 	console.log(`Ready! Logged in as ${c.user.tag}`);
