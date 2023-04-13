@@ -37,9 +37,9 @@ client.on(Events.MessageCreate, async message => {
     const imagebuffer = await wCard.CreateImageCard(
         bg,
         avatar,
-        '歡迎誤入拉斯的狼窩',
+	'welcomeText',
         message.author.username,
-        `狼仔數量: ${message.guild.memberCount}`
+        `MCount: ${message.guild.memberCount}`
     )
     
     await message.channel.send({files: [imagebuffer] })
