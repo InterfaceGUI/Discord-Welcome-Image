@@ -49,12 +49,12 @@ client.on(Events.MessageCreate, async message => {
 
 client.on(Events.GuildMemberAdd, async member  => {
     
-	const avatar = member.displayAvatarURL({ extension: 'png' })
+	const avatar = member.user.displayAvatarURL({ extension: 'png' })
     const imagebuffer = await wCard.CreateImageCard(
         bg,
         avatar,
         `${config.WelcomeText}`,
-        member.username,
+        member.user.username,
         `${config.memberCountText}: ${member.guild.memberCount}`
     )
     
@@ -62,7 +62,7 @@ client.on(Events.GuildMemberAdd, async member  => {
     await channel.send({files: [imagebuffer] });
 
     const channel2 = await client.guilds.cache.get(config.GuildID).channels.fetch(config.infoChannel)
-    await channel2.send({content:`<@${member.id}>`});
+    await channel2.send({content:`<@${member.user.id}>`});
 
 });
 function sleep(ms) {
