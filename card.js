@@ -74,7 +74,7 @@ async function addAvatar(bgcanvas,avatars){
     const avatar = await loadImage(avatars)
 
     ctx.globalCompositeOperation = 'source-over';
-    ctx.drawImage(avatar, circleX - circleRadius, circleY - circleRadius, circleX + circleRadius + 0, circleY + circleRadius + 0);
+    ctx.drawImage(avatar, circleX - circleRadius, circleY - circleRadius, circleRadius*2, circleRadius*2);
 
 
 
