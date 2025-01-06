@@ -2,7 +2,7 @@
 This is a welcome image generator for Discord that uses node-canvas to create images.
 This module allows customizing the welcome image.
 
-![img1](https://cdn.discordapp.com/attachments/876477309039808563/1095557596041199697/file.jpg)
+![img1](https://imgs.larskarter.xyz/imgs/dc.png)
 
 ## Install only inage generator
 
